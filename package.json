@@ -12,11 +12,9 @@
     "compile": "better-npm-run compile",
     "lint": "eslint src tests server",
     "lint:fix": "npm run lint -- --fix",
-    "start": "better-npm-run start:prod",
+    "start": "better-npm-run start",
     "dev": "better-npm-run dev",
     "dev:no-debug": "npm run dev -- --no_debug",
-    "serve": "better-npm-run start",
-    "postinstall": "npm run deploy:prod",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
     "deploy": "better-npm-run deploy",
@@ -59,10 +57,11 @@
         "DEBUG": "app:*"
       }
     },
-    "start:prod": {
-    "command": "babel-node bin/server",
-    "env": {
-      "NODE_ENV": "production"
+    "start": {
+      "command": "babel-node bin/server",
+      "env": {
+        "DEBUG": "app:*"
+      }
     },
     "test": {
       "command": "babel-node ./node_modules/karma/bin/karma start build/karma.conf",
