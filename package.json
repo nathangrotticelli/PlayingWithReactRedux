@@ -59,12 +59,6 @@
         "DEBUG": "app:*"
       }
     },
-    "start": {
-      "command": "babel-node bin/server",
-      "env": {
-        "DEBUG": "app:*"
-      }
-    },
     "start:prod": {
     "command": "babel-node bin/server",
     "env": {
